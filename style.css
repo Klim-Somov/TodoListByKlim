@@ -3,7 +3,7 @@ body {
           box-sizing: border-box;
   background-color: #3b555d;
   color: #fff;
-  /* position: relative; */
+  overflow-y: hidden;
   font-family: 'Roboto', sans-serif;
 }
 
