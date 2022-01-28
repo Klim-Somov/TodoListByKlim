@@ -10,6 +10,7 @@
  let todoItemElems = [];
  
  
+ 
  class Task {
      constructor(description) {
          this.description = description;
@@ -31,15 +32,13 @@
 
         todoItemElems = document.querySelectorAll('.todo-container__item');
     }
-}
+};
+
+
 fillHtmlListDone();
 
 
 
-
-
-
- 
 
 
 
@@ -65,7 +64,7 @@ fillHtmlListDone();
  
 
 
- console.log(dones.join('\n'))
+
 
  window.addEventListener('click', function (event) {
      if (event.target.classList == 'btn-delete') {
@@ -132,8 +131,6 @@ fillHtmlListDone();
  
  
  
- 
- 
  let menuBtn = document.querySelector('.side-menu-btn');
  menuBtn.addEventListener("click", () => {
     doneTasks.classList.toggle('closed-open'); 
@@ -146,3 +143,10 @@ if (iconMenu) {
         icon.classList.toggle('_active-b');
     });
 };
+
+
+const clearBtn = document.querySelector('.clear-done-list');
+const donesList = document.querySelector('.done-list');
+clearBtn.addEventListener('click', e => {
+    doneList.innerHTML = ""
+});
