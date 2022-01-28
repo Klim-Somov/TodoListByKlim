@@ -148,5 +148,8 @@ if (iconMenu) {
 const clearBtn = document.querySelector('.clear-done-list');
 const donesList = document.querySelector('.done-list');
 clearBtn.addEventListener('click', e => {
-    doneList.innerHTML = ""
+    doneList.innerHTML = "";
+    dones = [];
+    localStorage.setItem('dones', JSON.stringify(dones));
+
 });
